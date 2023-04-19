@@ -3,20 +3,23 @@
     src: url('./Montserrat-ExtraBold.ttf'); /*URL to font*/
 }
 
-body {
+html, body {
 	margin: 0;
 	background-color: #2E282B;
+	height: 100vh;
+	width: 100%;
 }
 
-#scene-background {
+#root {
 	position: relative;
-	display: flex;
+
 	height: 100vh;
-	align-items: center;
-	justify-content: center;
+
 }
 
 h1 {
+	overflow: hidden;
+
 	max-width: 1080px;
 	color: #3F393B;
 	text-transform: uppercase;
@@ -25,6 +28,13 @@ h1 {
 	text-align: center;
 	letter-spacing: -0.3rem;
 	line-height: 13rem;
+	user-select: none;
+	margin: 0;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
 }
 
 h2 {
@@ -40,4 +50,27 @@ h2 {
 	letter-spacing: -0.1rem;
 	line-height: 2rem;
 	margin: 0;
+}
+
+img {
+	user-select: none;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 3;
+}
+
+.frame {
+	background: linear-gradient(to right, #f0ece5, #efdece 6%, #efdece), #efdece;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+    width: 225px;
+    height: 475px;
+    position: absolute;
+    z-index: 2;
+	border-radius: 20px;
+    /* background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/frameIphone.png); */
+    pointer-events: none;
 }
