@@ -1,8 +1,19 @@
+import { Canvas } from "@react-three/fiber"
+import Guitar from "./Components/Guitar.jsx"
+import Menu from "./Components/Menu.jsx"
+
 export default function App() {
 	return   <>
-	<h2>3D Flip Menu</h2>
-	<h1>3D Flip Menu</h1>
-	<img src="./frame.png" alt="" srcset="" />
-	<div className="frame"></div>
+		<span id="logo">3D Flip Menu</span>
+		<span id="background-title">3D Flip Menu</span>
+		<img src="./frame.png" alt=""/>
+		<div className="frame">
+			<Canvas flat id="canvas" gl={{ antialias: true }}>
+				<group>
+					<Menu></Menu>
+					<Guitar />
+				</group>
+			</Canvas>
+		</div>
 </>
 }
