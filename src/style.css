@@ -3,6 +3,11 @@
     src: url('./Montserrat-ExtraBold.ttf'); /*URL to font*/
 }
 
+@font-face {
+    font-family: 'Montserrat2'; /*a name to be used later*/
+    src: url('./Montserrat-Bold.ttf'); /*URL to font*/
+}
+
 html, body {
 	margin: 0;
 	background-color: #2E282B;
@@ -62,7 +67,7 @@ img {
 }
 
 .frame {
-	background: linear-gradient(to right, #f0ece5, #efdece 6%, #efdece), #efdece;
+	background: #ACA598;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
@@ -85,4 +90,22 @@ canvas {
     z-index: 3;
 	border-radius: 20px;
 
+}
+
+h3 {
+	color: #0D0906;
+	text-transform: uppercase;
+	font-family: 'Montserrat2';
+	font-size: 11px;
+	text-align: center;
+	letter-spacing: -0.5px;
+	/* line-height: 13rem; */
+	user-select: none;
+	margin: 0;
+	position: absolute;
+	left: 50%;
+	top: 60px;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	z-index: 4;
 }
