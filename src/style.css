@@ -13,6 +13,14 @@ html, body {
 	background-color: #2E282B;
 	height: 100vh;
 	width: 100%;
+	user-select: none;
+	-webkit-user-drag: none;
+	user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 #root {
@@ -55,7 +63,7 @@ html, body {
 	margin: 0;
 }
 
-img {
+#phone {
 	user-select: none;
 	position: absolute;
 	left: 50%;
@@ -64,6 +72,7 @@ img {
 	z-index: 3;
 	width: 330px;
 	pointer-events: none;
+
 }
 
 .frame {
@@ -76,8 +85,6 @@ img {
     position: absolute;
     z-index: 2;
 	border-radius: 20px;
-    /* background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/frameIphone.png); */
-    pointer-events: none;
 }
 
 canvas {
@@ -109,3 +116,138 @@ h3 {
 	width: 100%;
 	z-index: 4;
 }
+
+#hamburger {
+	background-color: transparent;
+	position: absolute;
+	left: 25px;
+	top: 55px;
+	max-width: 200px;
+	z-index: 4;
+	width: 30px;
+	height: 30px;
+}
+
+#hamburger div:first-child{
+	background-color: #393631;
+	width: 24px;
+	height: 4px;
+}
+
+#hamburger div:nth-child(2){
+	background-color: #393631;
+	width: 24px;
+	height: 4px;
+	margin-top: 4px;
+}
+
+#hamburger div:nth-child(3){
+	background-color: #393631;
+	width: 19px;
+	height: 4px;
+	margin-top: 4px;
+}
+
+#instruments {
+	color: #0D0906;
+	text-transform: uppercase;
+	font-family: 'Montserrat';
+	background-color: transparent;
+	position: absolute;
+	left: 0px;
+	top: 180px;
+	max-width: 200px;
+	z-index: 4;
+	width: 30px;
+	height: 30px;
+	transform: rotateY(90deg);
+	/* transform-style: preserve-3d; */
+	transition: transform 0.85s cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+#about {
+	color: #0D0906;
+	text-transform: uppercase;
+	font-family: 'Montserrat';
+	background-color: transparent;
+	position: absolute;
+	left: 0px;
+	top: 480px;
+	max-width: 200px;
+	z-index: 4;
+	width: 30px;
+	height: 30px;
+	transform: rotateY(90deg);
+	/* transform-style: preserve-3d; */
+	transition: transform 0.85s cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+
+#instruments li {
+	font-size: 20px;
+	list-style-type: none;
+	line-height: 40px;
+	letter-spacing: -0.8px;
+}
+
+#about li {
+	font-size: 12px;
+	list-style-type: none;
+	line-height: 28px;
+	letter-spacing: -0.8px;
+}
+
+
+#instruments li:first-child {
+	color: #8A3325
+}
+
+#year {
+	color: #CBCACC;
+	position: absolute;
+	right: 50px;
+	top: 50px;
+	max-width: 200px;
+
+	text-transform: uppercase;
+	font-family: 'Montserrat';
+	font-size: 18px;
+	letter-spacing: 0px;
+	line-height: 2rem;
+	margin: 0;
+}
+
+#tuto {
+	color: #CBCACC;
+	position: absolute;
+	left: 50px;
+	bottom: 30px;
+	max-width: 200px;
+
+	text-transform: uppercase;
+	font-family: 'Montserrat';
+	font-size: 12px;
+	letter-spacing: 0px;
+	/* line-height: 0px; */
+	margin: 0;
+}
+
+#credit {
+	color: #CBCACC;
+	position: absolute;
+	right: 50px;
+	bottom: 30px;
+	max-width: 300px;
+	text-transform: uppercase;
+	font-family: 'Montserrat';
+	font-size: 12px;
+	letter-spacing: 0px;
+	margin: 0;
+	text-align: right;
+}
+
+@media screen and (max-width: 640px) {
+	#credit {
+	  display:none;
+	}
+  }
