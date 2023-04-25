@@ -1,11 +1,11 @@
 @font-face {
-    font-family: 'Montserrat'; /*a name to be used later*/
-    src: url('./Montserrat-ExtraBold.ttf'); /*URL to font*/
+    font-family: 'Montserrat';
+    src: url("../public/Montserrat-ExtraBold.ttf");
 }
 
 @font-face {
-    font-family: 'Montserrat2'; /*a name to be used later*/
-    src: url('./Montserrat-Bold.ttf'); /*URL to font*/
+    font-family: 'Montserrat2';
+    src: url('../public/Montserrat-SemiBold.ttf');
 }
 
 html, body {
