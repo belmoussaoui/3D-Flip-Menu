@@ -9,6 +9,8 @@ import Cursor from "./Components/Cursor.jsx"
 
 
 export default function App() {
+	const detailsRef = useRef()
+	const burgerRef = useRef()
 	const groupRef = useRef()
 	const listRef = useRef()
 	const listRef2 = useRef()
@@ -25,7 +27,6 @@ export default function App() {
 	}
 
 	const onPointerMove = (event) => {
-		console.log(event.movementX);
 		if (!isClick) return
 		if (!side && event.movementX > 3)
 			eventHandler();
@@ -39,6 +40,9 @@ export default function App() {
 		if (test) return
 		side = (side + 1) % 2;
 		test = true;
+		detailsRef.current.classList.toggle("move");
+		burgerRef.current.classList.toggle("move2");
+
 		if (listRef.current.style.transform == "rotateY(0deg)")
 		{
 			listRef.current.style.transform = "rotateY(90deg)";
@@ -47,8 +51,10 @@ export default function App() {
 		}
 		else
 		{
-			listRef.current.style.transform = "rotateY(0deg)";
-			listRef2.current.style.transform = "rotateY(0deg)";
+			setTimeout(() => {
+				listRef.current.style.transform = "rotateY(0deg)";
+				listRef2.current.style.transform = "rotateY(0deg)";
+			}, 300);
 		}
 		gsap.to(groupRef.current.rotation, {
 			duration: 0.85,
@@ -67,8 +73,8 @@ export default function App() {
 		<img id="phone" src="./frame.png" draggable="false"/>
 		<div className="frame">
 				<Canvas onPointerMove={onPointerMove} onPointerDown={onPointerDown} onPointerUp={onPointerUp} flat gl={{ antialias: true }}  camera={{ fov: 60, near: 0.1, far: 200 }}>
+				<directionalLight color={"#FDF2E3"} castShadow position={ [ 0, 1, 2 ] } intensity={ 0.7 } />
 				<group ref={ groupRef } rotation-y={0} position={[0,0,-1]}>
-				<directionalLight castShadow position={ [ -2, 1, 2 ] } intensity={ 2 } />
         		<ambientLight intensity={ 0.5 } />
 					<Menu></Menu>
 					<Text3D
@@ -94,6 +100,22 @@ export default function App() {
 							JA-90
 						<meshBasicMaterial color={"#0D0906"} />
         			</Text3D>
+					{/* <Text3D
+						rotation-y={-Math.PI/2}
+						font="Montserrat-Bold.json"
+						position={[-1.6, 0.75, -1]}
+						rotation-z={0}
+						size={ 0.12 }
+						lineHeight={1.4}
+						letterSpacing={-0.005}
+        				height={ 0.00001 }>
+            				GUITARS{"\n"}
+							BASSES{"\n"}
+							AMPS{"\n"}
+							PEDALS{"\n"}
+							OTHERS{"\n"}
+						<meshBasicMaterial color={"#0D0906"} />
+        			</Text3D> */}
 					<Guitar />
 				</group>
 			</Canvas>
@@ -115,12 +137,12 @@ export default function App() {
 					<li>Faqs</li>
 				</ul>
 			</div>			
-			<div id="hamburger" onClick={eventHandler}>
+			<div id="hamburger" onClick={eventHandler} ref={burgerRef}>
 				<div></div>
 				<div></div>
 				<div></div>
 			</div>
-			<h3 onClick={eventHandler}>Product Details</h3>
+			<h3  ref={detailsRef} onClick={eventHandler}>Product Details</h3>
 			</div>
 
 		</>

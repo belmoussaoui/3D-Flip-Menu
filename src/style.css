@@ -76,6 +76,7 @@ html, body {
 }
 
 .frame {
+	overflow: hidden;
 	background: #ACA598;
 	left: 50%;
 	top: 50%;
@@ -106,7 +107,6 @@ h3 {
 	font-size: 11px;
 	text-align: center;
 	letter-spacing: -0.5px;
-	/* line-height: 13rem; */
 	user-select: none;
 	margin: 0;
 	position: absolute;
@@ -115,6 +115,7 @@ h3 {
 	transform: translate(-50%, -50%);
 	width: 100%;
 	z-index: 4;
+	transition: left 0.7s ease-in-out;
 }
 
 #hamburger {
@@ -126,6 +127,8 @@ h3 {
 	z-index: 4;
 	width: 30px;
 	height: 30px;
+	transition: left 0.7s ease-in-out;
+
 }
 
 #hamburger div:first-child{
@@ -162,7 +165,7 @@ h3 {
 	height: 30px;
 	transform: rotateY(90deg);
 	/* transform-style: preserve-3d; */
-	transition: transform 0.85s cubic-bezier(0.5, 0, 0.5, 1);
+	transition: transform 0.55s cubic-bezier(0.5, 0, 0.5, 1);
 }
 
 #about {
@@ -179,7 +182,7 @@ h3 {
 	height: 30px;
 	transform: rotateY(90deg);
 	/* transform-style: preserve-3d; */
-	transition: transform 0.85s cubic-bezier(0.5, 0, 0.5, 1);
+	transition: transform 0.55s cubic-bezier(0.5, 0, 0.5, 1);
 }
 
 
@@ -250,4 +253,13 @@ h3 {
 	#credit {
 	  display:none;
 	}
-  }
+}
+
+.move {
+	left: 125%;
+}
+
+.move2 {
+	left: 85%!important;
+}
+
