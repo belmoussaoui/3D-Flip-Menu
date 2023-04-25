@@ -72,8 +72,8 @@ export default function App() {
 		<span id="credit">Sketch by Minh Pham<br></br>Code by Bilal El Moussaoui</span>
 		<img id="phone" src="./frame.png" draggable="false"/>
 		<div className="frame">
-				<Canvas onPointerMove={onPointerMove} onPointerDown={onPointerDown} onPointerUp={onPointerUp} flat gl={{ antialias: true }}  camera={{ fov: 60, near: 0.1, far: 200 }}>
-				<directionalLight color={"#FDF2E3"} castShadow position={ [ 0, 1, 2 ] } intensity={ 0.7 } />
+				<Canvas shadows onPointerMove={onPointerMove} onPointerDown={onPointerDown} onPointerUp={onPointerUp} flat gl={{ antialias: true }}  camera={{ fov: 60, near: 0.1, far: 200 }}>
+				<directionalLight color={"#FDF2E3"} castShadow position={ [ 0, 2.8, 3 ] } intensity={ 0.8 } />
 				<group ref={ groupRef } rotation-y={0} position={[0,0,-1]}>
         		<ambientLight intensity={ 0.5 } />
 					<Menu></Menu>
