@@ -91,7 +91,7 @@ export default function App() {
 						font="Montserrat-Bold.json"
 						position={[-1, -2.1, 1]}
 						rotation-z={0}
-						size={ 0.125 }
+						size={ 0.14 }
 						lineHeight={0.8}
 						letterSpacing={-0.001}
         				height={ 0.00001 }>
