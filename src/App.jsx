@@ -1,7 +1,7 @@
 import { Canvas } from "@react-three/fiber"
 import Guitar from "./Components/Guitar.jsx"
 import Menu from "./Components/Menu.jsx"
-import { useEffect, useRef } from "react"
+import { useRef } from "react"
 import gsap from "gsap"
 import { Text3D } from '@react-three/drei'
 import Cursor from "./Components/Cursor.jsx"
@@ -100,22 +100,6 @@ export default function App() {
 							JA-90
 						<meshBasicMaterial color={"#0D0906"} />
         			</Text3D>
-					{/* <Text3D
-						rotation-y={-Math.PI/2}
-						font="Montserrat-Bold.json"
-						position={[-1.6, 0.75, -1]}
-						rotation-z={0}
-						size={ 0.12 }
-						lineHeight={1.4}
-						letterSpacing={-0.005}
-        				height={ 0.00001 }>
-            				GUITARS{"\n"}
-							BASSES{"\n"}
-							AMPS{"\n"}
-							PEDALS{"\n"}
-							OTHERS{"\n"}
-						<meshBasicMaterial color={"#0D0906"} />
-        			</Text3D> */}
 					<Guitar />
 				</group>
 			</Canvas>
@@ -142,8 +126,7 @@ export default function App() {
 				<div></div>
 				<div></div>
 			</div>
-			<h3  ref={detailsRef} onClick={eventHandler}>Product Details</h3>
+			<h3 ref={detailsRef} onClick={eventHandler}>Product Details</h3>
 			</div>
-
 		</>
 }

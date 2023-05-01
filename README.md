@@ -1,4 +1,4 @@
-# Three.js Journey
+# 3D Flip Menu
 
 ## Setup
 Download [Node.js](https://nodejs.org/en/download/).
